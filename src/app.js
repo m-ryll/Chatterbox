@@ -13,7 +13,7 @@ var redis = require("connect-redis")(session);
 var url = require("url");
 
 // Set up Mongoose.
-var dbURL = process.env.MONGOLAB_URI || "mongodb://localhost/Chatterbox";
+var dbURL = process.env.MONGODB_URI || "mongodb://localhost/Chatterbox";
 var db = mongoose.connect(dbURL, function(err) {
 	if (err) {
 		console.log("Could not connect to database");
